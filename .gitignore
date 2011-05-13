@@ -1,0 +1,18 @@
+# maven
+target
+# eclipse
+.project
+.settings
+.classpath
+bin
+# IDEA
+*.iml
+.idea
+out
+# sbt
+lib_managed
+src_managed
+project/boot
+.scala_dependencies
+
+# project-specific files
