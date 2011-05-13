@@ -5,8 +5,8 @@ class Project(info: ProjectInfo) extends ParentProject(info) with IdeaProject  {
   lazy val iglootoolsRepository = "Iglootools Releases Repository" at "http://www.iglootools.org/artifactory/iglootools-release"
 
   override def managedStyle = ManagedStyle.Maven
-  //val publishTo = "Iglootools" at "http://www.iglootools.org/artifactory/iglootools-release-local"
-  //Credentials(Path.userHome / ".ivy2" / ".credentials", log)
+  val publishTo = "Iglootools" at "http://www.iglootools.org/artifactory/iglootools-release-local"
+  Credentials(Path.userHome / ".ivy2" / ".credentials", log)
 
   lazy val java = project("java", "iglootools-commons-java", new Java(_))
   lazy val scala = project("scala", "iglootools-commons-scala", new Scala(_), java)
